@@ -1,6 +1,6 @@
-import { Menu, X } from 'lucide-react';
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Menu, X } from "lucide-react";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 const Navbar = () => {
   const [displayOverlay, setDisplayOverlay] = useState(false);
   return (
@@ -13,7 +13,7 @@ const Navbar = () => {
             className=" px-5 py-2 font-bold rounded-[7px] border-gray-300 border"
             to="/login"
           >
-            {' '}
+            {" "}
             Login
           </Link>
           <Link
@@ -26,14 +26,14 @@ const Navbar = () => {
         {displayOverlay ? (
           <X
             onClick={() => setDisplayOverlay(!displayOverlay)}
-            className=" relative cursor-pointer"
+            className=" relative md:hidden flex cursor-pointer"
             color="white"
             size={30}
           />
         ) : (
           <Menu
             onClick={() => setDisplayOverlay(!displayOverlay)}
-            className=" relative cursor-pointer"
+            className=" relative md:hidden flex cursor-pointer"
             color="white"
             size={30}
           />
@@ -51,7 +51,7 @@ const MenuSection = () => {
         className=" w-[90%] h-[50px] flex justify-center items-center font-bold rounded-[7px] border-gray-300 border"
         to="/login"
       >
-        {' '}
+        {" "}
         Login
       </Link>
       <Link
